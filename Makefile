@@ -15,27 +15,27 @@ C1:= wordpress
 C2:= mariadb
 
 build:
-	cd srcs && docker-compose build && cd ../
+	cd srcs && docker compose build && cd ../
 
 # up => create + start containers defined in compose file
 up:
-	cd srcs && docker-compose up -d && cd ../
+	cd srcs && docker compose up -d && cd ../
 
 down:
-	cd srcs && docker-compose down && cd ../
+	cd srcs && docker compose down && cd ../
 
 # start => start containers that currently stop
 start:
-	cd srcs && docker-compose start && cd ../
+	cd srcs && docker compose start && cd ../
 
 stop:
-	cd srcs && docker-compose stop && cd ../
+	cd srcs && docker compose stop && cd ../
 
 ps:
 	docker ps
 
 logs:
-	cd srcs && docker-compose logs && cd ../
+	cd srcs && docker compose logs && cd ../
 
 images:
 	docker images
